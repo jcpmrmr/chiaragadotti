@@ -18,7 +18,7 @@
 			}
 
 			#header nav ul li {
-				flex: 1 1 0 !important;   /* 0 come base, non 25%, così crescono tutti uguali */
+				flex: 1 1 0 !important;
 				min-width: 0 !important;
 				list-style: none !important;
 			}
@@ -35,9 +35,27 @@
 				white-space: nowrap !important;
 			}
 
-			/* === ICONA GERMOGLIO: ingrandimento leggero per visibilità === */
+			/* === ICONA GERMOGLIO === */
 			#header .logo .icon {
 				font-size: 1.75rem !important;
+			}
+
+			/* === NESSUN EFFETTO ZOOM all'apertura delle sezioni === */
+			#main > article {
+				-webkit-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
+			}
+			#main > article.active {
+				-webkit-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
+			}
+			/* Neutralizza il transform anche nei selettori is-article-visible */
+			body.is-article-visible #header {
+				-webkit-transform: none !important;
+				-ms-transform: none !important;
+				transform: none !important;
 			}
 		</style>
 	</head>
@@ -47,7 +65,7 @@
 
 			<header id="header">
 				<div class="logo">
-					<!-- 🌱 fa-seedling = germoglio (Font Awesome 5+) -->
+					<!-- 🌱 fa-seedling = germoglio -->
 					<span class="icon solid fa-seedling"></span>
 				</div>
 				<div class="content">
@@ -58,9 +76,9 @@
 				</div>
 				<nav>
 					<ul>
-						<li><a href="#intro">CHIARA</a></li>
+						<li><a href="#chiara">CHIARA</a></li>
 						<li><a href="#adulti">ADULTI</a></li>
-						<li><a href="#adolescenti">GIOVANI</a></li>
+						<li><a href="#giovani">GIOVANI</a></li>
 						<li><a href="#contatti">CONTATTI</a></li>
 					</ul>
 				</nav>
@@ -68,24 +86,24 @@
 
 			<div id="main">
 
-				<article id="intro">
+				<article id="chiara">
 					<h2 class="major">CHIARA</h2>
 					<span class="image main"><img src="images/bg.jpg" alt="" /></span>
-					<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#adulti">awesome work</a>.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+					<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor.</p>
 				</article>
 
 				<article id="adulti">
 					<h2 class="major">ADULTI</h2>
 					<span class="image main"><img src="images/bg.jpg" alt="" /></span>
 					<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.</p>
 				</article>
 
-				<article id="adolescenti">
+				<article id="giovani">
 					<h2 class="major">GIOVANI</h2>
 					<span class="image main"><img src="images/bg.jpg" alt="" /></span>
-					<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus.</p>
 				</article>
 
 				<article id="contatti">
@@ -111,9 +129,16 @@
 						</ul>
 					</form>
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li>
+							<a href="https://wa.me/TUONUMERO" class="icon brands fa-whatsapp" target="_blank">
+								<span class="label">WhatsApp</span>
+							</a>
+						</li>
+						<li>
+							<a href="mailto:TUAEMAIL@esempio.it" class="icon solid fa-envelope">
+								<span class="label">Email</span>
+							</a>
+						</li>
 					</ul>
 				</article>
 
