@@ -1401,27 +1401,32 @@ input, select, textarea {
 			opacity: 0;
 		}
 
-/* Ripristino dimensioni immagini nelle sottosezioni */
+/* Ripristino Grafica Originale Sottosezioni */
 #main article .image.main {
-	margin: 2.5rem 0 !important;
-	width: 100% !important;
+	margin: -4.5rem -3rem 3rem -3rem !important;
+	width: calc(100% + 6rem) !important;
+	max-width: none !important;
 	display: block !important;
 }
 
 #main article .image.main img {
 	width: 100% !important;
 	height: auto !important;
-	max-height: 25vh; /* Impedisce alle immagini di diventare giganti sullo schermo */
-	object-fit: cover !important;
-	border-radius: 4px !important;
+	max-height: none !important;
+	object-fit: contain !important;
+	border-radius: 0 !important;
 }
 
 @media screen and (max-width: 736px) {
 	#main article .image.main {
-		margin: 2rem 0 !important;
-	}
-	#main article .image.main img {
-		max-height: 20vh;
+		margin: -3.5rem -2rem 2.5rem -2rem !important;
+		width: calc(100% + 4rem) !important;
 	}
 }
 
+@media screen and (max-width: 480px) {
+	#main article .image.main {
+		margin: -3rem -1.5rem 2rem -1.5rem !important;
+		width: calc(100% + 3rem) !important;
+	}
+}
