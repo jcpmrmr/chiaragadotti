@@ -1400,3 +1400,27 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Ripristino dimensioni immagini nelle sottosezioni */
+#main article .image.main {
+	margin: 2.5rem 0 !important;
+	width: 100% !important;
+	display: block !important;
+}
+
+#main article .image.main img {
+	width: 100% !important;
+	height: auto !important;
+	max-height: 25vh; /* Impedisce alle immagini di diventare giganti sullo schermo */
+	object-fit: cover !important;
+	border-radius: 4px !important;
+}
+
+@media screen and (max-width: 736px) {
+	#main article .image.main {
+		margin: 2rem 0 !important;
+	}
+	#main article .image.main img {
+		max-height: 20vh;
+	}
+}
