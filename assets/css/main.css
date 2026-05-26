@@ -1242,7 +1242,7 @@ input, select, textarea {
 		background-image: none !important;
 		max-width: 100%;
 		text-align: center;
-		margin-top: 5vh !important; /* Sposta centralmente il titolo nel cielo */
+		margin-top: 16vh !important;
 	}
 
 		#header > * {
