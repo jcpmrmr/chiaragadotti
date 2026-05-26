@@ -8,13 +8,36 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
 		<style>
-			#header nav ul li {
-				flex: 1 1 25% !important;
-			}
-			#header nav ul li a {
-				text-align: center !important;
-				display: block !important;
+			/* === NAV: quattro bottoni uguali con testo centrato === */
+			#header nav ul {
+				display: flex !important;
+				flex-wrap: nowrap !important;
 				width: 100% !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			#header nav ul li {
+				flex: 1 1 0 !important;   /* 0 come base, non 25%, così crescono tutti uguali */
+				min-width: 0 !important;
+				list-style: none !important;
+			}
+
+			#header nav ul li a {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				text-align: center !important;
+				width: 100% !important;
+				box-sizing: border-box !important;
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+				white-space: nowrap !important;
+			}
+
+			/* === ICONA GERMOGLIO: ingrandimento leggero per visibilità === */
+			#header .logo .icon {
+				font-size: 1.75rem !important;
 			}
 		</style>
 	</head>
@@ -22,71 +45,92 @@
 
 		<div id="wrapper">
 
-				<header id="header">
-						<div class="logo">
-							<span class="icon solid fa-leaf"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>CHIARA GADOTTI</h1>
-								<p>PSICOSINTESI EDUCATIVA E COUNSELING</p>
+			<header id="header">
+				<div class="logo">
+					<!-- 🌱 fa-seedling = germoglio (Font Awesome 5+) -->
+					<span class="icon solid fa-seedling"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>CHIARA GADOTTI</h1>
+						<p>PSICOSINTESI EDUCATIVA E COUNSELING</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#intro">INTRO</a></li>
+						<li><a href="#adulti">ADULTI</a></li>
+						<li><a href="#adolescenti">ADOLESCENTI</a></li>
+						<li><a href="#contatti">CONTATTI</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<div id="main">
+
+				<article id="intro">
+					<h2 class="major">Intro</h2>
+					<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+					<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#adulti">awesome work</a>.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+				</article>
+
+				<article id="adulti">
+					<h2 class="major">ADULTI</h2>
+					<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+					<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+					<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+				</article>
+
+				<article id="adolescenti">
+					<h2 class="major">ADOLESCENTI</h2>
+					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+					<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+				</article>
+
+				<article id="contatti">
+					<h2 class="major">CONTATTI</h2>
+					<form method="post" action="#">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Nome</label>
+								<input type="text" name="name" id="name" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="email" id="email" />
+							</div>
+							<div class="field">
+								<label for="message">Messaggio</label>
+								<textarea name="message" id="message" rows="4"></textarea>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Intro</a></li>
-								<li><a href="#adulti">ADULTI</a></li>
-								<li><a href="#adolescenti">ADOLESCENTI</a></li>
-								<li><a href="#contatti">CONTATTI</a></li>
-								</ul>
-						</nav>
-					</header>
+						<ul class="actions">
+							<li><input type="submit" value="Invia" class="primary" /></li>
+							<li><input type="reset" value="Cancella" /></li>
+						</ul>
+					</form>
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</article>
 
-				<div id="main">
+			</div>
 
-						<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#adulti">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
+			<footer id="footer">
+				<p class="copyright">&copy; Chiara Gadotti</p>
+			</footer>
 
-						<article id="adulti">
-								<h2 class="major">ADULTI</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
+		</div>
 
-						<article id="adolescenti">
-								<h2 class="major">ADOLESCENTI</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article>
+		<div id="bg"></div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-						<article id="contatti">
-								<h2 class="major">CONTATTI</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href
+	</body>
+</html>
