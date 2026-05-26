@@ -1199,7 +1199,7 @@ input, select, textarea {
 		position: relative;
 		min-height: 100vh;
 		width: 100%;
-		padding: 1rem 2rem 8rem 2rem !important;
+		padding: 4rem 2rem 2rem 2rem !important; /* Spazio riequilibrato */
 		z-index: 3;
 	}
 
@@ -1209,27 +1209,15 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 1680px) {
-
-			#wrapper {
-				padding: 3rem 2rem;
-			}
-
+			#wrapper { padding: 3rem 2rem 2rem 2rem !important; }
 		}
 
 		@media screen and (max-width: 736px) {
-
-			#wrapper {
-				padding: 2rem 1rem;
-			}
-
+			#wrapper { padding: 2rem 1rem 1rem 1rem !important; }
 		}
 
 		@media screen and (max-width: 480px) {
-
-			#wrapper {
-				padding: 1rem;
-			}
-
+			#wrapper { padding: 1rem 1rem 1rem 1rem !important; }
 		}
 
 /* Header */
@@ -1624,10 +1612,10 @@ input, select, textarea {
 		-webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		-ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
 		transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-		margin-top: 15rem !important;
+		margin-top: auto !important; /* Spinge il footer magneticamente in fondo */
+		padding-top: 2rem;
 		width: 100%;
 		max-width: 100%;
-		margin-top: 2rem;
 		text-align: center;
 	}
 
@@ -1637,6 +1625,7 @@ input, select, textarea {
 			opacity: 0.75;
 			margin-bottom: 0;
 			text-transform: uppercase;
+			color: #ffffff !important;
 		}
 
 		body.is-article-visible #footer {
@@ -1654,3 +1643,6 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+#header {
+	margin-bottom: 5rem !important; /* Crea una zona di sicurezza sopra le montagne */
+}
